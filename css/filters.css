@@ -1,17 +1,23 @@
 /* Default styles remain the same */
-h2 { 
+.filter-container h2 { 
     margin-bottom: 20px;
-    font-size: 1.2rem!important;
+    font-size: 1.3rem!important;
     font-weight: bold!important;
 }
 
 .filter-item {
     margin-bottom: 15px;
 }
+.filter-container .hotel-name{
+    font-size: 1rem!important;
+    font-weight: bold!important;
+    margin-bottom: 10px;
+}
 
-/* First input text with the button */
-.fisrt-filter-item {
-    margin-bottom: 20px; /* Adjust as needed for spacing */
+.filter-item .hotel-name {
+    font-size: 1rem!important;
+    font-weight: bold!important;
+    margin-bottom: 10px;
 }
 
 .input-container {
@@ -100,7 +106,7 @@ h2 {
     display: flex; /* Use flexbox to align items horizontally */
     justify-content: space-between; /* Space between items */
     align-items: center; /* Vertically center the items */
-}
+}   
 
 .checkbox-container input[type="checkbox"] {
     margin-right: 8px; /* Space between checkbox and label */
@@ -127,7 +133,7 @@ h2 {
 
 /* end of checkbox  */
 .filter-item label {
-    font-weight: 700;
+    font-weight: 600;
     display: block;
     margin-bottom: 5px;
 }
@@ -356,4 +362,52 @@ h2 {
         width: 20px; /* Larger icon */
         height: 30px; /* Larger icon */
     }
+}
+
+.icon-box {
+    border: 2px solid #d8d8d8;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.icon-item {
+    text-align: center;
+    margin: 10px;
+    width: 20%; /* Ensures three items per row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100px; /* Ensures equal height for each item */
+}
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Spacing between icon and text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #bdbdbd;
+
+}
+.icon-circle i {
+    font-size: 1.4rem; /* Slightly reduced for better padding fit */
+    color: #333;
+    margin: 0; /* Removes margin around the icon */
+
+}
+.icon-item p {
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    max-width: 3.7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

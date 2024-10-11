@@ -105,95 +105,97 @@ function populateHotelData(hotel, index) {
     // Create hotel HTML structure
     const hotelHTML = `
         <div class="hotel_container">
-          <div class="row">
-                    <div class="col-12 col-sm-4">
-    <div id="hotelCarousel${index}" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            ${hotel.images.map((image, imgIndex) => `
-                <div class="carousel-item ${imgIndex === 0 ? 'active' : ''}">
-                    <img class="hotel_image" src="${image}" alt="${hotel.name}">
+    <div class="row">
+        <div class="col-12 col-sm-4">
+            <div id="hotelCarousel${index}" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    ${hotel.images.map((image, imgIndex) => `
+                    <div class="carousel-item ${imgIndex === 0 ? 'active' : ''}">
+                        <img class="hotel_image" src="${image}" alt="${hotel.name}">
+                    </div>
+                    `).join('')}
                 </div>
-            `).join('')}
+                <a class="carousel-control-prev" href="#hotelCarousel${index}" role="button" data-slide="prev">
+                    <span class="custom-icon" aria-hidden="true">&#10094;</span> <!-- Custom icon -->
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#hotelCarousel${index}" role="button" data-slide="next">
+                    <span class="custom-icon" aria-hidden="true">&#10095;</span> <!-- Custom icon -->
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
-        <a class="carousel-control-prev" href="#hotelCarousel${index}" role="button" data-slide="prev">
-            <span class="custom-icon" aria-hidden="true">&#10094;</span> <!-- Custom icon -->
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#hotelCarousel${index}" role="button" data-slide="next">
-            <span class="custom-icon" aria-hidden="true">&#10095;</span> <!-- Custom icon -->
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-
-                    <div class="col-12 col-sm-8">
-                        <div class="container-fluid description-hotel">
-                            <div class="row">
-                                <div class="col-12 col-sm-9 left_side">
-                                    <h4 class="hotel-name">
-                                        ${hotel.name}
-                                        <span class="rating">
-                                            ${Array.from({ length: hotel.rating }).map(() => `<i class="fas fa-star"></i>`).join('')}
-                                        </span>
-                                    </h4>
-                                    <p class="location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>${hotel.location}</span>
-                                    </p>
-                                    <p class="kaaba_distance">
-                                        <i class="fa-solid fa-kaaba"></i>
-                                        <span>${hotel.kaabaDistance}</span>
-                                    </p>
-            <div class="container px-4">
-              <div class="d-flex flex-wrap gap-2">
-                                            ${hotel.tags.map(tag => `
-                                                    <div class="tag d-flex align-items-center"><i class="${tag.icon} me-1"></i> ${tag.name}</div>
-                                            `).join('')}
-                                        </div>
-                                    </div>
-                                    <hr class="solid">
-                                    <div class="feature-list">
-                                        <h5>Petit - déjeuner inclus</h5>
-                                        <ul>
-                                            ${hotel.breakfastIncluded.map(item => `<li>${item}</li>`).join('')}
-                                        </ul>
+        
+        <div class="col-12 col-sm-8">
+            <div class="container-fluid description-hotel">
+                <div class="row">
+                    <div class="col-12 col-sm-9 left_side">
+                        <h4 class="hotel-name">
+                            ${hotel.name}
+                            <span class="rating">
+                                ${Array.from({ length: hotel.rating }).map(() => `<i
+                                    class="fas fa-star"></i>`).join('')}
+                            </span>
+                        </h4>
+                        <p class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>${hotel.location}</span>
+                        </p>
+                        <p class="kaaba_distance">
+                            <i class="fa-solid fa-kaaba"></i>
+                            <span>${hotel.kaabaDistance}</span>
+                        </p>
+                        <div class="container px-4">
+                            <div class="d-flex flex-wrap gap-2">
+                                ${hotel.tags.map(tag => `
+                                <div class="tag d-flex align-items-center"><i class="${tag.icon} me-1"></i> ${tag.name}
+                                </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <hr class="solid">
+                        <div class="feature-list">
+                            <h5>Petit - déjeuner inclus</h5>
+                            <ul>
+                                ${hotel.breakfastIncluded.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3 right_side d-flex flex-row flex-sm-column">
+                        <div class="container p-0">
+                            <div class="row no-gutters">
+                                <div class="col-3 col-sm-5 p-0">
+                                    <div class="rating-badge d-flex align-items-center p-0">
+                                        <div class="rating-score">${hotel.reviewScore}</div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-3 right_side d-flex flex-row flex-sm-column">
-                                    <div class="container p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-3 col-sm-5 p-0">
-                                                <div class="rating-badge d-flex align-items-center p-0">
-                                                    <div class="rating-score">${hotel.reviewScore}</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-5 col-sm-7 p-0">
-                                                <div class="row no-gutters">
-                                                    <div class="col-8 col-sm-6 p-0">
-                                                        <div class="rating-label">Très bien</div>
-                                                        <div class="review-count">${hotel.reviewCount}</div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div class="col-5 col-sm-7 p-0">
+                                    <div class="row no-gutters">
+                                        <div class="col-8 col-sm-6 p-0">
+                                            <div class="rating-label">Très bien</div>
+                                            <div class="review-count">${hotel.reviewCount}</div>
                                         </div>
                                     </div>
-                                    <div class="spacer" style="flex-grow:1;"></div>
-                                    <div class="container p-0">
-                                        <div class="row no-gutters">
-                                            <div class="col-sm-12 p-0">
-                                                <div class="price-badge d-flex align-items-center p-0">
-                                                    <div class="price">${hotel.price}</div>
-                                                    <div class="description">${hotel.description}</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spacer" style="flex-grow:1;"></div>
+                        <div class="container p-0">
+                            <div class="row no-gutters">
+                                <div class="col-sm-12 p-0">
+                                    <div class="price-badge d-flex align-items-center p-0">
+                                        <div class="price">${hotel.price}</div>
+                                        <div class="description">${hotel.description}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
+    </div>
+</div>
     `;
 
     hotelContainer.innerHTML += hotelHTML; // Append the new hotel data to the existing container

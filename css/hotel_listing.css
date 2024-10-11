@@ -126,7 +126,7 @@
     display: flex;              
     flex-direction: column;     
     height: auto; 
-    
+    padding-top: 15px !important; /* Add some padding for spacing */
 }
 
 .spacer {
@@ -630,9 +630,9 @@ align-self: center;
     }
     
     .mobile-filtre-item i {
-        font-size: 1.7rem ;
+        font-size: 1.5rem ;
         color: black; /* Icon color */
-        margin-right: 15px; /* Space between icon and text */
+        margin-right: 0.8rem /* Space between icon and text */
         
     }
     
