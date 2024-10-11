@@ -2,7 +2,7 @@
 const hotels = [
     {
         name: "Raffles Makkah Palace",
-        images: ["../assets/images/omra/3.jfif", "../assets/images/omra/4.jfif", "../assets/images/omra/1.jfif"],
+        images: ["img/3.jfif", "img/4.jfif", "img/1.jfif"],
         location: "Makkah Abraj Al Bait Complex",
         kaabaDistance: "300 m du haram",
         tags: [
@@ -27,7 +27,7 @@ const hotels = [
     },
     {
         name: "Hilton Makkah Convention Hotel",
-        images: ["../assets/images/omra/3.jfif", "../assets/images/omra/4.jfif", "../assets/images/omra/1.jfif"],
+        images: ["img/3.jfif", "img/4.jfif", "img/1.jfif"],
         location: "Makkah, Al Jawhara",
         kaabaDistance: "500 m du haram",
         tags: [
@@ -52,7 +52,7 @@ const hotels = [
     },
     {
         name: "Makkah Hotel",
-        images: ["../assets/images/omra/3.jfif", "../assets/images/omra/4.jfif", "../assets/images/omra/1.jfif"],
+        images: ["img/3.jfif", "img/4.jfif", "img/1.jfif"],
         location: "Makkah Al Haram",
         kaabaDistance: "200 m du haram",
         tags: [
@@ -75,7 +75,7 @@ const hotels = [
     },
     {
         name: "Al Safwa Hotel",
-        images: ["../assets/images/omra/3.jfif", "../assets/images/omra/4.jfif", "../assets/images/omra/1.jfif"],
+        images: ["img/3.jfif", "img/4.jfif", "img/1.jfif"],
         location: "Makkah, Near Haram",
         kaabaDistance: "400 m du haram",
         tags: [
