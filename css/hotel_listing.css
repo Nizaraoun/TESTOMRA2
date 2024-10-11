@@ -1,0 +1,695 @@
+/* **************** LIST OF HOTEL******************** */
+.hotel_container {
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid #CDCDCD;
+    margin-top: 20px!important; 
+  margin-bottom: 40px!important;
+ 
+  } 
+  .hotel_container:hover {
+    box-shadow: 0 0 10px 0 #C69320;
+    height: 40vh;
+}
+
+.hotel_container:hover .hotel_image {
+    height: 39.9vh !important;
+}
+  .hotel_image {
+    width: 100%;
+    height: 38.9vh !important;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+  }
+  
+
+ 
+  /* ++++++++++++++hotel descript++++++++++++++++++++ */
+  .description-hotel {
+   
+    padding: 0px!important;
+    margin: 0px!important;
+  }
+  .left_side {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    padding-top: 5px;
+}
+/* hotel name */
+.left_side .hotel-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0F0F0F;
+    letter-spacing: 0.5px; 
+    font-family: sans-serif; ;
+
+}
+.rating {
+    color: #C69320; 
+    margin-left: 3px!important;
+}
+.rating i {
+    font-size: 1rem;
+    margin: 0px!important;
+    text-align: top; ;
+}
+/* location */
+.left_side .location{
+    font-size: 0.9rem;
+    color: #9B6E08;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: sans-serif; ;
+}
+/* distance to kaaba  */
+.left_side .kaaba_distance{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da; 
+    border-radius: 20px; 
+    padding: 5px 10px;
+    margin: 5px; 
+    font-size: 0.7rem; 
+    color: #333; 
+    white-space: nowrap; 
+    margin-top:0!important; 
+
+}
+
+.tag i {
+    margin-right: 5px; 
+    color: #333;
+    padding-top: 5px;
+}
+    
+
+/* *********feature-list************ */
+.feature-list{
+ margin-top: 0!important; 
+ padding-top: 0 !important ;
+}
+.feature-list h5 {
+    margin-right: 20px;
+    font-weight: bold; 
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.feature-list ul {
+    list-style: none; 
+    padding-left: 0; 
+    margin: 0; 
+    display: flex;
+    
+}
+
+.feature-list li {
+    margin-right: 30px;
+    color: green; 
+    white-space: nowrap;
+
+}
+
+
+
+
+/*++++++++++++++++++ left sid ++++++++++++++++++++++++++++++++ */
+.right_side {
+    display: flex;              
+    flex-direction: column;     
+    height: auto; 
+    
+}
+
+.spacer {
+    flex-grow: 1;            
+}
+
+
+
+.rating-badge {
+    display: flex;
+    align-items: center;
+    padding: 0!important;
+    margin-top: 5px ;
+}
+
+.rating-score {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #C69320;
+    color: white;
+    border-radius: 15px 0 20px 0;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 0px; ;
+}
+
+.rating-label {
+    font-size: 1rem;
+    margin-left: 0!important;
+    padding-left:  0!important;
+    white-space: nowrap; /* Prevent wrapping */
+    display: inline-block;
+    font-family: sans-serif; 
+    font-weight:bold;
+}
+.review-count {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    color: #222222;
+    white-space: nowrap; /* Prevent wrapping */
+    display: inline-block;
+}
+
+.price-badge {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+align-self: center;
+
+}
+.price-badge .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+.price-badge .description{
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    
+}
+
+
+@media (min-width: 576px) { 
+    .hotel_image {
+        height: auto!important;
+
+    }
+  
+    .left_side {
+      padding: 15px;
+    }
+  
+    .hotel_container {
+      height: auto!important;
+      margin-top: 10px!important;
+      margin-bottom: 20px!important;
+    }
+  
+    .feature-list ul {
+      flex-direction: column; /* Stack the list vertically on mobile */
+    }
+  .hotel_image{
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+    height: 30vh!important;
+
+}
+.left_side{
+    padding-bottom: 10px!important;
+}
+ 
+    .left_side .hotel-name {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        letter-spacing: 0.2px; 
+    
+    }
+    .rating {
+        font-size: 0.5rem!important;
+    }
+    .rating i {
+        font-size: 0.85rem;
+    }
+    .left_side .location{
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .left_side .kaaba_distance{
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .tag {
+        font-size: 0.9rem; 
+        padding: 3px 5px;
+        margin: 2px; 
+    }
+
+    .feature-list h5 {
+        font-size: 1.2rem;
+    }
+    .feature-list li {
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+
+    .rating-badge {
+        margin-top: 5px;
+    }
+    .rating-score {
+        font-size: 1rem;
+        padding: 7px;
+        margin-right: 5px;
+    }
+    .rating-label {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+    .review-count {
+        font-size: 0.8rem;
+        margin-left: 1px;
+    }
+    .price-badge .price {
+        font-size: 1.4rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .price-badge .description{
+        font-size: 0.9rem;
+    }
+    .description-hotel {
+       
+        padding-left: 25px!important;
+       
+    }
+    .right_side {
+        display: flex;
+        flex-direction: row!important;
+        align-items: start; /* Center horizontally */
+        justify-content: end; /* Center vertically */
+        text-align: center; /* Center text within each flex item */
+        padding-top: 0px!important;      
+        margin-top: 0px!important;          
+    
+    }
+    
+    
+} 
+ /* **************** LIST OF HOTEL******************** */
+ .hotel_container {
+    height: 39vh;
+    border-radius: 20px;
+    border: 1px solid #CDCDCD;
+    margin-top: 20px!important; 
+  margin-bottom: 40px!important;
+ 
+  } 
+  .hotel_container:hover {
+    box-shadow: 0 0 10px 0 #C69320;
+    height: 40vh;
+}
+
+.hotel_container:hover .hotel_image {
+    height: 39.9vh !important;
+}
+  .hotel_image {
+    width: 100%;
+    height: 38.9vh !important;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+  }
+  
+
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #cbcbcb!important;
+    padding: 2px!important;
+    border-radius: 50%;
+    color: #000!important;
+    font-weight: 400!important;
+  }
+  /* ++++++++++++++hotel descript++++++++++++++++++++ */
+  .description-hotel {
+   
+    padding: 0px!important;
+    margin: 0px!important;
+  }
+  .left_side {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    padding-top: 5px;
+}
+/* hotel name */
+.left_side .hotel-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0F0F0F;
+    letter-spacing: 0.5px; 
+    font-family: sans-serif; ;
+
+}
+.rating {
+    color: #C69320; 
+    margin-left: 3px!important;
+}
+.rating i {
+    font-size: 1rem;
+    margin: 0px!important;
+    text-align: top; ;
+}
+/* location */
+.left_side .location{
+    font-size: 0.9rem;
+    color: #9B6E08;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: sans-serif; ;
+}
+/* distance to kaaba  */
+.left_side .kaaba_distance{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da; 
+    border-radius: 20px; 
+    padding: 5px 10px;
+    margin: 5px; 
+    font-size: 0.7rem; 
+    color: #333; 
+    white-space: nowrap; 
+    margin-top:0!important; 
+
+}
+
+.tag i {
+    margin-right: 5px; 
+    color: #333;
+    padding-top: 5px;
+}
+    
+
+/* *********feature-list************ */
+.feature-list{
+ margin-top: 0!important; 
+ padding-top: 0 !important ;
+}
+.feature-list h5 {
+    margin-right: 20px;
+    font-weight: bold; 
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.feature-list ul {
+    list-style: none; 
+    padding-left: 0; 
+    margin: 0; 
+    display: flex;
+    
+}
+
+.feature-list li {
+    margin-right: 30px;
+    color: green; 
+    white-space: nowrap;
+
+}
+
+
+
+
+/*++++++++++++++++++ left sid ++++++++++++++++++++++++++++++++ */
+.right_side {
+    display: flex;              
+    flex-direction: column;     
+    height: auto; 
+    
+}
+
+.spacer {
+    flex-grow: 1;            
+}
+
+
+
+.rating-badge {
+    display: flex;
+    align-items: center;
+    padding: 0!important;
+    margin-top: 5px ;
+}
+
+.rating-score {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #C69320;
+    color: white;
+    border-radius: 15px 0 20px 0;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 0px; ;
+}
+
+.rating-label {
+    font-size: 1rem;
+    margin-left: 0!important;
+    padding-left:  0!important;
+    white-space: nowrap; /* Prevent wrapping */
+    display: inline-block;
+    font-family: sans-serif; 
+    font-weight:bold;
+}
+.review-count {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    color: #222222;
+    white-space: nowrap; /* Prevent wrapping */
+    display: inline-block;
+}
+
+.price-badge {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+align-self: center;
+
+}
+.price-badge .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+.price-badge .description{
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    
+}
+
+
+    @media (max-width: 576px ) {
+    .hotel_image {
+        height: auto!important;
+
+    }
+  
+    .left_side {
+      padding: 15px;
+    }
+  
+    .hotel_container {
+      height: auto!important;
+      margin-top: 10px!important;
+      margin-bottom: 20px!important;
+    }
+  
+    .feature-list ul {
+      flex-direction: column; /* Stack the list vertically on mobile */
+    }
+  .hotel_image{
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+    height: 30vh!important;
+
+}
+ 
+    .left_side .hotel-name {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        letter-spacing: 0.2px; 
+    
+    }
+    .rating {
+        font-size: 0.5rem!important;
+    }
+    .rating i {
+        font-size: 1rem;
+        }
+    .left_side .location{
+        font-size: 1rem;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .left_side .kaaba_distance{
+        font-size: 1rem;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+    .tag {
+        font-size: 1rem; 
+        padding: 3px 5px;
+        margin: 2px; 
+    }
+
+    .feature-list h5 {
+        font-size: 1.2rem;
+    }
+    .feature-list li {
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+
+    .rating-badge {
+        margin-top: 5px;
+    }
+    .rating-score {
+        font-size: 1.2rem;
+        padding: 7px;
+        margin-right: 5px;
+    }
+    .rating-label {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+    .review-count {
+        font-size: 0.9rem;
+        margin-left: 1px;
+    }
+    .price-badge .price {
+        font-size: 1.4rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 900;
+    }
+    .price-badge .description{
+        font-size: 0.95rem;
+    }
+    .description-hotel {
+       
+        padding-left: 25px!important;
+       
+    }
+    .right_side {
+        display: flex;
+        flex-direction: row!important;
+        align-items: start; /* Center horizontally */
+        justify-content: end; /* Center vertically */
+        text-align: center; /* Center text within each flex item */
+        padding-top: 0px!important;      
+        margin-top: 0px!important;          
+    
+    }
+
+    .mobile-filtre{
+        padding: 5px 0; /* Add some padding for spacing */
+        box-shadow: #0F0F0F;
+        margin-left: 5px ;
+
+    }
+
+  
+    .mobile-filtre-row {
+        display: flex; /* Use flexbox for horizontal layout */
+        justify-content: space-around; /* Space out the columns evenly */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .mobile-filtre-col {
+        text-align: center; /* Center text within the column */
+    }
+    
+    .mobile-filtre-item {
+        display: flex; /* Use flexbox for icon and text */
+        align-items: center; /* Align items horizontally */
+    }
+    
+    .mobile-filtre-item i {
+        font-size: 1.7rem ;
+        color: black; /* Icon color */
+        margin-right: 15px; /* Space between icon and text */
+        
+    }
+    
+    .mobile-filtre-item span {
+        font-size: 1.2rem; /* Text size */
+        color: black; /* Text color */
+        font-family: sans-serif; /* Use a sans-serif font */;
+        font-weight: 600;
+
+
+    }
+    
+} 
+
+  
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: relative; /* Allows absolute positioning of custom icon */
+}
+
+/* Default icon styles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+   width: 0;
+    height: 0;
+    display: inline-block;
+    
+}
+
+/* Custom icon styles */
+.custom-icon {
+    width: 30px; /* Custom icon width */
+    height: 30px; /* Custom icon height */
+    position: absolute; /* Position the custom icon */
+    color: black; /* Custom icon color */
+    font-size: 20px; /* Custom icon size */
+    background-color: rgb(255, 255, 255); /* Background for the icon */
+    border-radius: 50%; /* Make it circular */
+    padding: 7px; /* Add padding for spacing */
+    z-index: 1; /* Make sure it's on top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev .custom-icon {
+    left: 15px; /* Adjust positioning for the previous icon */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+.carousel-control-next .custom-icon {
+    right: 15px; /* Adjust positioning for the next icon */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+
+

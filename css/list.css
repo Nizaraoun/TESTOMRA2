@@ -1,0 +1,16 @@
+/* filtre */
+/* main.css */
+@import url('./header.css');
+@import url('./searchbar.css');
+@import url('./filters.css');
+@import url('./hotel_listing.css');
+@import url('./map.css');
+
+
+/* global */
+.filter-container {
+    border-radius: 5px;
+    padding: 20px;
+}
+/* end global */
+
