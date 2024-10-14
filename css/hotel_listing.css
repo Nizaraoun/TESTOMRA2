@@ -16,7 +16,7 @@
  
   } 
   .hotel_container:hover {
-    box-shadow: 0 0 10px 0 #C69320;
+    box-shadow: 0 0 10px 0 rgba(87, 87, 87, 0.212);
     background-color: #f8f9fa;  ;
 }
 
