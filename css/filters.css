@@ -1,7 +1,17 @@
 /* Default styles remain the same */
+.filter-container {
+    padding: 0;
+    border: 1px solid #F1F1F1;
+    border-radius: 12px;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px; ;
+    
+
+}
 .filter-container h2 { 
     margin-bottom: 20px;
-    font-size: 1.3rem!important;
+    font-size: 1.1rem!important;
     font-weight: bold!important;
 }
 
@@ -9,13 +19,13 @@
     margin-bottom: 15px;
 }
 .filter-container .hotel-name{
-    font-size: 1rem!important;
+    font-size: 0.9rem!important;
     font-weight: bold!important;
     margin-bottom: 10px;
 }
 
 .filter-item .hotel-name {
-    font-size: 1rem!important;
+    font-size: 0.8rem!important;
     font-weight: bold!important;
     margin-bottom: 10px;
 }
@@ -53,8 +63,8 @@
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Remove default thumb appearance */
     appearance: none; /* Remove default thumb appearance */
-    width: 18px; /* Thumb width */
-    height: 18px; /* Thumb height */
+    width: 16px; /* Thumb width */
+    height: 16px; /* Thumb height */
     background: #ffffff; /* Thumb color */
     border-radius: 50%; /* Make the thumb round */
     cursor: pointer; /* Pointer cursor */
@@ -69,15 +79,15 @@
 }
 
 .slider::-moz-range-thumb {
-    width: 20px; /* Thumb width */
-    height: 20px; /* Thumb height */
+    width: 18px; /* Thumb width */
+    height: 18px; /* Thumb height */
     background: #E59F00; /* Thumb color */
     border-radius: 50%; /* Make the thumb round */
 }
 
 .slider::-ms-thumb {
-    width: 20px; /* Thumb width */
-    height: 20px; /* Thumb height */
+    width: 18px; /* Thumb width */
+    height: 18px; /* Thumb height */
     background: #E59F00; /* Thumb color */
     border-radius: 50%; /* Make the thumb round */
 }
@@ -94,7 +104,7 @@
 .filter-item .price-range span {
     white-space: nowrap; /* Prevent wrapping */
     margin: 2px;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 0.5px;
 }
 
@@ -115,7 +125,7 @@
 .checkbox-container label {
     flex: 1;
     font-family: sans-serif!important;
-    font-size: 1em;
+    font-size: 0.85rem;
     font-weight: 400!important;
     color: #333!important; 
     letter-spacing: 0.5px!important;
@@ -123,6 +133,7 @@
 
 .checkbox-container span {
     margin-left: auto; /* Push count to the end of the container */
+        font-size: smaller;
 }
 
 .order-last {
@@ -141,7 +152,7 @@
 .filter-item input[type="text"],
 .filter-item input[type="number"] {
     width: calc(100% - 10px);
-    padding: 8px;
+    padding: 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -160,9 +171,9 @@
 .slider {
     -webkit-appearance: none; /* Remove default appearance */
     width: 100%;
-    height: 7px; /* Track height */
+    height: 5px; /* Track height */
     background: #E59F00; /* Track color */
-    border-radius: 5px; /* Rounded track */
+    border-radius: 10px; /* Rounded track */
     position: absolute;
     top: 15px; /* Adjust vertical position */
     outline: none; /* Remove outline */
@@ -250,32 +261,34 @@
 .rating-label {
     display: flex;
     align-items: center;
+    font-size: medium;
+    
 }
 
 .badge-success {
     background-color: #87C34A;
-    font-size: 1rem!important;
+    font-size: medium;
     margin-right: 10px;
     padding: 5px 10px;
 }
 
 .badge-success-light {
     background-color: #A1D874;
-    font-size: 1rem!important;
+    font-size: medium;
     margin-right: 10px;
     padding: 5px 10px;
 }
 
 .badge-warning {
     background-color: #F0AD4E;
-    font-size: 1rem!important;
+    font-size: medium;
     margin-right: 10px;
     padding: 5px 10px;
 }
 
 .badge-warning-light {
     background-color: #F7C666;
-    font-size: 1rem!important;
+    font-size: larger;
     margin-right: 10px;
     padding: 5px 10px;
 }
@@ -321,51 +334,12 @@
 }
 
 /* Tablet Styles */
-@media (min-width: 768px) and (max-width: 1024px) {
-    h2 {
-        font-size: 1.8rem!important; /* Adjust font size */
-    }
 
-    .input-container {
-        flex-direction: row; /* Align input and button in a row */
-    }
-
-    .input-container .search {
-        width: auto; /* Reset width */
-    }
-
-    .checkbox-container {
-        justify-content: space-between; /* Space between items */
-    }
-
-    .service-icon {
-        width: 15px; /* Slightly larger icon */
-        height: 25px; /* Slightly larger icon */
-    }
-}
 
 /* Desktop Styles */
-@media (min-width: 1025px) {
-    h2 {
-        font-size: 2rem!important; /* Larger font size */
-    }
-
-    .input-container {
-        flex-direction: row; /* Align input and button in a row */
-    }
-
-    .checkbox-container {
-        justify-content: space-between; /* Space between items */
-    }
-
-    .service-icon {
-        width: 20px; /* Larger icon */
-        height: 30px; /* Larger icon */
-    }
-}
 
 .icon-box {
-    border: 2px solid #d8d8d8;
+    border: 2px solid #F1F1F1;
     background-color: #ffffff;
     border-radius: 10px;
     display: flex;
@@ -392,7 +366,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #bdbdbd;
+    border: 3px solid #F1F1F1;
 
 }
 .icon-circle i {
@@ -410,4 +384,69 @@
     max-width: 3.7em;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++responsive ++++++++++++++++++++++++++++++ */
+
+/* Base styling for the filter section */
+.filtre_bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styling for larger screens (desktop) */
+@media (max-width: 768px) {
+
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+  
+
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 767px) {
+    .filtre_bloc {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+
+    .filter-container {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    /* Make sure that all filter items have full width */
+    .filter-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    /* Style the input fields and sliders to be responsive */
+    .input-container, .slider-container, .price-range {
+        width: 100%;
+    }
+
+    /* Style adjustments for icons to fit well on smaller screens */
+    .icon-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .icon-item {
+        flex: 1 1 45%; /* Adjust icon items for two per row */
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    /* Adjust the text and button alignment in mobile */
+    .order-last, .rating-item, .price-range {
+        text-align: center;
+    }
 }

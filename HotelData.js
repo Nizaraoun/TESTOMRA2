@@ -104,7 +104,7 @@ function populateHotelData(hotel, index) {
 
     // Create hotel HTML structure
     const hotelHTML = `
-        <div class="hotel_container">
+<div class="hotel_container">
     <div class="row">
         <div class="col-12 col-sm-4">
             <div id="hotelCarousel${index}" class="carousel slide" data-interval="false">
