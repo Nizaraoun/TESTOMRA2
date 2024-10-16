@@ -230,8 +230,8 @@
 }
 
 .rating-checkbox {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     margin-right: 15px!important;
     transform: scale(1.3); /* Makes the checkbox larger */
     appearance: none; /* Removes default styling */
@@ -293,6 +293,7 @@
     padding: 5px 10px;
 }
 
+
 /* Media Queries for Responsiveness */
 
 /* Mobile Styles */
@@ -301,36 +302,41 @@
         font-size: 1.5rem!important; /* Increase font size for mobile */
     }
 
-    .input-container {
-        flex-direction: column; /* Stack input and button */
-        align-items: stretch; /* Stretch to full width */
-    }
 
-    .input-container .search {
-        width: 100%; /* Full width for button */
-        margin-top: 10px; /* Add space between input and button */
+    .filter-item input[type="text"],
+    .filter-item input[type="number"] {
+        width: 100%; /* Full width for input fields */
     }
-
-    .filter-item {
-        margin-bottom: 10px; /* Adjust margin for smaller screens */
-    }
-
     .service-icon-container {
         padding: 10px; /* Reduce padding */
     }
 
     .checkbox-container {
-        flex-direction: column; /* Stack checkboxes vertically */
+        flex-direction: row; /* Stack checkboxes vertically */
         align-items: flex-start; /* Align left */
+
     }
 
     .checkbox-container label {
-        font-size: 0.9em; /* Smaller font size */
+        font-size:large /* Smaller font size */
     }
 
     .order-last {
         text-align: center; /* Center text */
     }
+    .rating-checkbox{
+        width: 17px;
+        height: 17px;
+        margin-right: 20px!important;
+        margin-top:7px ;
+      
+    }
+    .checkbox-container span {
+        margin-left: 0; /* Reset margin */
+        font-size: large;
+
+    }
+    
 }
 
 /* Tablet Styles */
@@ -435,7 +441,7 @@
     /* Style adjustments for icons to fit well on smaller screens */
     .icon-box {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-around;
     }
 
@@ -448,5 +454,8 @@
     /* Adjust the text and button alignment in mobile */
     .order-last, .rating-item, .price-range {
         text-align: center;
+    }
+    .icon-item p {
+        font-size: 0.9rem;
     }
 }

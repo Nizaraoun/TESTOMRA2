@@ -1,0 +1,102 @@
+.app-bar {
+    display: flex;
+    align-items: center;
+    
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add position relative */
+}
+
+.app-bar .btn {
+    margin-right: 10px; /* Adjust margin for spacing */
+    padding-right : 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+
+
+}
+
+.app-bar .page-title {
+    flex-grow: 1; /* Allow the title to grow and take available space */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0; /* Ensure no margin */
+}
+
+
+/* Scrollable filter container */
+.filtre_bloc {
+    margin-top: 50px; /* Push down the container below the fixed app bar */
+    overflow: hidden;
+    height: auto;
+
+}
+
+.scrollable-filter-container {
+    overflow-y: auto;
+    padding-top: 0; /* Optional: remove padding at the top to align with the app bar */
+    overflow: hidden!important; 
+    height: auto!important;
+
+
+}
+
+
+
+/* button recherch  */
+.search-button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    pointer-events: none; /* Allow content below to be clickable if needed */
+}
+
+.search-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e5a000c7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search-button i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+.filtre-section {
+    background-color: #f9f9f9; /* or any background color */
+    padding: 1rem;
+  }
+  
+  .d-none {
+    display: none !important;
+  }
+  

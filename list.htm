@@ -24,194 +24,213 @@
     crossorigin="anonymous"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> <!-- AOS CSS --> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
   <!-- container global  -->
-  <div class="container-xxl mt-5">
+  <div class="container-xxl mt-1">
     <!--  div / 2 l'écran -->
     <div class="row">
+      <!-- appbar -->
+      <div class="app-bar d-none d-sm-none">
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <button class="btn btn-link text-dark" onclick="close_filtre()">&#10094; Retour</button>
+            <span class="page-title mx-auto">Filtre</span>
+            <div class="flex-grow-1"></div> <!-- Empty div to push title to center -->
+        </div>
+    </div>
+    
+      
+      <!-- button recherch for filtre mobile  -->
+      <div class="search-button-container">
+        <button class="search-button d-none d-sm-none" onclick="performSearch()">
+          <i class="fas fa-search"></i> Rechercher
+        </button>
+      </div>
+      
+      <!-- en button  -->
+      <!-- end appbar -->
       <!-- filtre -->
-      <div class="col-3 d-none d-md-block filtre_bloc">
-        <img class="map" src="img/image.png" alt="omnitravel"data-aos="fade-right">
-        <div class="filter-container"data-aos="fade-right">
-          <h2>Filtrer par</h2>
-
-          <div class="filter-item">
-            <label for="hotel-name">Nom de l'hôtel</label>
-            <div class="input-container">
-              <input type="text" id="hotel-name" placeholder="Mot clés">
-              <button class="search">></button>
-            </div>
-
-          </div>
-          <div class="filter-item">
-            <label for="price-range">Tarif par nuit</label>
-            <div class="slider-container">
-              <input id="min-price-slider" class="slider" type="range" min="0" max="100" value="20"
-                oninput="updateMinValue()" />
-              <input id="max-price-slider" class="slider right" type="range" min="0" max="100" value="80"
-                oninput="updateMaxValue()" />
-            </div>
-            <div class="price-range">
-              <input type="number" id="min-price" value="20" min="0" oninput="updateSliderFromInput('min')" />
-              <span>-------</span>
-              <input type="number" id="max-price" value="80" min="0" oninput="updateSliderFromInput('max')" />
-            </div>
+      <div class="d-none d-md-block col-3 filtre_bloc">
+        <div class="scrollable-filter-container">
+          <img class="map d-none d-md-block" src="img/image.png" alt="omnitravel" data-aos="fade-right">
+          <div class="filter-container" data-aos="fade-right">
+            <h2>Filtrer par</h2>
 
             <div class="filter-item">
-              <label>Distance au Haram</label>
-              <br>
-
-              <div id="distance-filters" class="distance-filters"></div>
-              <div class="order-last">tous afficher(<span id="distance-count"></span>)</div>
-              <hr class="solid">
-            </div>
-
-            <div class="filter-item">
-              <label>Quartier</label>
-              <br>
-
-              <div id="quartier-filters" class="quartier-filters"></div>
-              <div class="order-last">tous afficher(<span id="quartier-count"></span>)</div>
-              <hr class="solid">
-            </div>
-            <!-- ******************** the rating filtre ****************** -->
-            <div class="filter-item">
-              <label>Vue Haram</label>
-              <br>
-
-              <div id="view-filters" class="view-filters"></div>
-              <div class="order-last">tous afficher(<span id="view-count"></span>)</div>
-              <hr class="solid">
-            </div>
-            <div class="filter-item">
-              <label>Notes clients</label>
-              <br>
-
-              <div class="rating-item">
-                <input type="checkbox" id="excellent" class="rating-checkbox">
-                <label for="excellent" class="rating-label">
-                  <span class="badge badge-success">87+</span> Excellent
-                </label>
+              <label for="hotel-name">Nom de l'hôtel</label>
+              <div class="input-container">
+                <input type="text" id="hotel-name" placeholder="Mot clés">
+                <button class="search">></button>
               </div>
-              <div class="rating-item">
-                <input type="checkbox" id="very-good" class="rating-checkbox">
-                <label for="very-good" class="rating-label">
-                  <span class="badge badge-success-light">81+</span> Très bien
-                </label>
-              </div>
-              <div class="rating-item">
-                <input type="checkbox" id="good" class="rating-checkbox">
-                <label for="good" class="rating-label">
-                  <span class="badge badge-warning">75+</span> Bien
-                </label>
-              </div>
-              <div class="rating-item">
-                <input type="checkbox" id="correct" class="rating-checkbox">
-                <label for="correct" class="rating-label">
-                  <span class="badge badge-warning-light">60+</span> Correct
-                </label>
-              </div>
+
             </div>
             <div class="filter-item">
-              <label>Service</label>
-                  <div class="icon-box">
-                      <div class="icon-item">
-                          <div class="icon-circle">
-                              <i class="fas fa-cut"></i>
-                          </div>
-                          <p>Coiffure</p>
-                      </div>
-                      <div class="icon-item">
-                          <div class="icon-circle">
-                              <i class="fas fa-spa"></i>
-                          </div>
-                          <p>Feet massage</p>
-                      </div>
-                      <div class="icon-item">
-                          <div class="icon-circle">
-                              <i class="fas fa-child"></i>
-                          </div>
-                          <p>Garderie d'enfants</p>
-                      </div>
-                      <div class="icon-item">
-                          <div class="icon-circle">
-                              <i class="fas fa-shuttle-van"></i>
-                          </div>
-                          <p>Navette</p>
-                      </div>
-                      <div class="icon-item">
-                          <div class="icon-circle">
-                              <i class="fas fa-pray"></i>
-                          </div>
-                          <p>Salle de prière disponible</p>
-                      </div>
-                      <div class="icon-item">
-                          <div class="icon-circle">
-                              <i class="fas fa-wheelchair"></i>
-                          </div>
-                          <p>Chambre aux handicapées</p>
-                      </div>
+              <label for="price-range">Tarif par nuit</label>
+              <div class="slider-container">
+                <input id="min-price-slider" class="slider" type="range" min="0" max="100" value="20"
+                  oninput="updateMinValue()" />
+                <input id="max-price-slider" class="slider right" type="range" min="0" max="100" value="80"
+                  oninput="updateMaxValue()" />
+              </div>
+              <div class="price-range">
+                <input type="number" id="min-price" value="20" min="0" oninput="updateSliderFromInput('min')" />
+                <span>-------</span>
+                <input type="number" id="max-price" value="80" min="0" oninput="updateSliderFromInput('max')" />
+              </div>
+
+              <div class="filter-item">
+                <label>Distance au Haram</label>
+                <br>
+
+                <div id="distance-filters" class="distance-filters"></div>
+                <div class="order-last">tous afficher(<span id="distance-count"></span>)</div>
+                <hr class="solid">
+              </div>
+
+              <div class="filter-item">
+                <label>Quartier</label>
+                <br>
+
+                <div id="quartier-filters" class="quartier-filters"></div>
+                <div class="order-last">tous afficher(<span id="quartier-count"></span>)</div>
+                <hr class="solid">
+              </div>
+              <!-- ******************** the rating filtre ****************** -->
+              <div class="filter-item">
+                <label>Vue Haram</label>
+                <br>
+
+                <div id="view-filters" class="view-filters"></div>
+                <div class="order-last">tous afficher(<span id="view-count"></span>)</div>
+                <hr class="solid">
+              </div>
+              <div class="filter-item">
+                <label>Notes clients</label>
+                <br>
+
+                <div class="rating-item">
+                  <input type="checkbox" id="excellent" class="rating-checkbox">
+                  <label for="excellent" class="rating-label">
+                    <span class="badge badge-success">87+</span> Excellent
+                  </label>
+                </div>
+                <div class="rating-item">
+                  <input type="checkbox" id="very-good" class="rating-checkbox">
+                  <label for="very-good" class="rating-label">
+                    <span class="badge badge-success-light">81+</span> Très bien
+                  </label>
+                </div>
+                <div class="rating-item">
+                  <input type="checkbox" id="good" class="rating-checkbox">
+                  <label for="good" class="rating-label">
+                    <span class="badge badge-warning">75+</span> Bien
+                  </label>
+                </div>
+                <div class="rating-item">
+                  <input type="checkbox" id="correct" class="rating-checkbox">
+                  <label for="correct" class="rating-label">
+                    <span class="badge badge-warning-light">60+</span> Correct
+                  </label>
+                </div>
+              </div>
+              <div class="filter-item">
+                <label>Service</label>
+                <div class="icon-box">
+                  <div class="icon-item">
+                    <div class="icon-circle">
+                      <i class="fas fa-cut"></i>
+                    </div>
+                    <p>Coiffure</p>
                   </div>
-              
-          </div>
-  
-            <div class="filter-item">
-              <br>
-              <label>Mosquées à proximité</label>
-              <br>
-              <div id="view-Mosquees" class="view-filters"></div>
-              <div class="order-last">tous afficher(<span id="view-count"></span>)</div>
-              <hr class="solid">
-            </div>
-            <!-- marque -->
-            <div class="filter-item">
-              <label>Marques</label>
-              <br>
+                  <div class="icon-item">
+                    <div class="icon-circle">
+                      <i class="fas fa-spa"></i>
+                    </div>
+                    <p>Feet massage</p>
+                  </div>
+                  <div class="icon-item">
+                    <div class="icon-circle">
+                      <i class="fas fa-child"></i>
+                    </div>
+                    <p>Garderie d'enfants</p>
+                  </div>
+                  <div class="icon-item">
+                    <div class="icon-circle">
+                      <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <p>Navette</p>
+                  </div>
+                  <div class="icon-item">
+                    <div class="icon-circle">
+                      <i class="fas fa-pray"></i>
+                    </div>
+                    <p>Salle de prière disponible</p>
+                  </div>
+                  <div class="icon-item">
+                    <div class="icon-circle">
+                      <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <p>Chambre aux handicapées</p>
+                  </div>
+                </div>
 
-              <div id="view-Marques" class="distance-filters"></div>
-              <div class="order-last">tous afficher(<span id="distance-count"></span>)</div>
-              <hr class="solid">
+              </div>
+
+              <div class="filter-item">
+                <br>
+                <label>Mosquées à proximité</label>
+                <br>
+                <div id="view-Mosquees" class="view-filters"></div>
+                <div class="order-last">tous afficher(<span id="view-count"></span>)</div>
+                <hr class="solid">
+              </div>
+              <!-- marque -->
+              <div class="filter-item">
+                <label>Marques</label>
+                <br>
+
+                <div id="view-Marques" class="distance-filters"></div>
+                <div class="order-last">tous afficher(<span id="distance-count"></span>)</div>
+                <hr class="solid">
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!-- main page -->
-      <div class="col-12 col-md-9" > <!-- Updated this line -->
-               <!-- don't display for mobile -->
-               <div class="container mobile-filtre d-md-none">
-                <div class="row mobile-filtre-row text-center">
-                    <div class="col mobile-filtre-col">
-                        <div class="mobile-filtre-item">
-                            <i class="bi bi-funnel"></i>
-                            <span>Filtre par</span>
-                        </div>
-                    </div>
-                    <div class="col mobile-filtre-col">
-                        <div class="mobile-filtre-item">
-                            <i class="bi bi-pin-map"></i>
-                            <span>Maps</span>
-                        </div>
-                    </div>
-                    <div class="col mobile-filtre-col">
-                        <div class="mobile-filtre-item">
-                            <i class="bi bi-arrow-down-up"></i>
-                            <span>trier par</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-12 col-md-9"> <!-- Updated this line -->
+        <!-- don't display for mobile -->
+        <div class="container mobile-filtre d-block d-sm-none">
+          <div class="row mobile-filtre-row text-center">
+            <div class="col mobile-filtre-col mobile-filtre-item">
+              <div class="mobile-filtre-col" onclick="open_filtre()">
+                <i class="bi bi-funnel"></i>
+                <span>Filtre par</span>
+              </div>
             </div>
-            <hr class="solid d-md-none mb-3" style="margin-bottom: 5vh !important;">
-
-
+            <div class="col mobile-filtre-col">
+              <div class="mobile-filtre-item">
+                <i class="bi bi-pin-map"></i>
+                <span>Maps</span>
+              </div>
+            </div>
+            <div class="col mobile-filtre-col">
+              <div class="mobile-filtre-item">
+                <i class="bi bi-arrow-down-up"></i>
+                <span>trier par</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="solid d-md-none mb-3" style="margin-bottom: 5vh !important;">
         <h3 class="d-none d-md-block">Hébergements pour La Mecque</h3>
         <!-- date of result  -->
-                <!-- don't display for mobile -->
+        <!-- don't display for mobile -->
 
-        <p id="resultats" ></p>
+        <p id="resultats"></p>
         <div class="container  d-none d-md-block">
           <div class="row container-filtre">
             <div class="col-sm-2 title">
@@ -241,17 +260,14 @@
         </div>
 
         <!-- les hotels dispo apres le filtre -->
-        <div class="hotel_container_list"data-aos="fade-left">
+        <div class="hotel_container_list" data-aos="fade-left">
         </div>
 
+        <!-- *********************** -->
 
 
 
-<!-- *********************** -->
-
-
-
-<!-- ++++++++++++++++++++++++ -->
+        <!-- ++++++++++++++++++++++++ -->
 
       </div>
       <!-- end of hotle  -->
@@ -263,6 +279,7 @@
   <script src="tab.js"></script>
   <script src="date_of_result.js"></script>
   <script src="HotelData.js"></script>
+  <script src="showfiltre.js"></script>
 
   <!-- Bootstrap JS and dependencies (Popper.js, jQuery) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -272,14 +289,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  
+
   <script>
     AOS.init({
       duration: 1000,  // Animation duration in milliseconds
       once: true,      // Whether animation should happen only once - while scrolling down
     });
   </script>
-   <script>
+  <script>
     // JavaScript to handle click events
     const filterToggle = document.getElementById('filter-toggle');
     const filterSection = document.getElementById('filter-section');

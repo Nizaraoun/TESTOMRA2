@@ -426,7 +426,7 @@ align-self: center;
     }
   .hotel_image{
     object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     height: 30vh!important;
 
 }
@@ -512,6 +512,8 @@ align-self: center;
         padding: 5px 0; /* Add some padding for spacing */
         box-shadow: #0F0F0F;
         margin-left: 5px ;
+        display: flex;
+        
 
     }
 
@@ -529,6 +531,11 @@ align-self: center;
     .mobile-filtre-item {
         display: flex; /* Use flexbox for icon and text */
         align-items: center; /* Align items horizontally */
+        white-space: nowrap; 
+        
+        
+        flex-direction: row;
+
     }
     
     .mobile-filtre-item i {
