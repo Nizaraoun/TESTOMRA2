@@ -200,31 +200,32 @@
           </div>
         </div>
       </div>
-      <!-- main page -->
-      <div class="col-12 col-md-9"> <!-- Updated this line -->
-        <!-- don't display for mobile -->
-        <div class="container mobile-filtre d-block d-sm-none">
-          <div class="row mobile-filtre-row text-center">
-            <div class="col mobile-filtre-col mobile-filtre-item">
-              <div class="mobile-filtre-col" onclick="open_filtre()">
-                <i class="bi bi-funnel"></i>
-                <span>Filtre par</span>
-              </div>
+      <div class="container mobile-filtre d-block d-sm-none">
+        <div class="row mobile-filtre-row text-center">
+          <div class="col mobile-filtre-col mobile-filtre-item">
+            <div class="mobile-filtre-col" onclick="open_filtre()">
+              <i class="bi bi-funnel"></i>
+              <span>Filtre par</span>
             </div>
-            <div class="col mobile-filtre-col">
-              <div class="mobile-filtre-item">
-                <i class="bi bi-pin-map"></i>
-                <span>Maps</span>
-              </div>
+          </div>
+          <div class="col mobile-filtre-col">
+            <div class="mobile-filtre-item">
+              <i class="bi bi-pin-map"></i>
+              <span>Maps</span>
             </div>
-            <div class="col mobile-filtre-col">
-              <div class="mobile-filtre-item">
-                <i class="bi bi-arrow-down-up"></i>
-                <span>trier par</span>
-              </div>
+          </div>
+          <div class="col mobile-filtre-col">
+            <div class="mobile-filtre-item">
+              <i class="bi bi-arrow-down-up"></i>
+              <span>trier par</span>
             </div>
           </div>
         </div>
+      </div>
+      <!-- main page -->
+      <div class="col-12 col-md-9"> <!-- Updated this line -->
+        <!-- don't display for mobile -->
+        
         <hr class="solid d-md-none mb-3" style="margin-bottom: 5vh !important;">
         <h3 class="d-none d-md-block">Hébergements pour La Mecque</h3>
         <!-- date of result  -->
@@ -274,7 +275,6 @@
     </div>
   </div>
   <script src="filtre.js"></script>
-
   <script src="list.js"></script>
   <script src="tab.js"></script>
   <script src="date_of_result.js"></script>
